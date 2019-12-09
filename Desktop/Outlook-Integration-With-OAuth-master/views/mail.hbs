@@ -1,0 +1,178 @@
+{{! Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE.txt in the project root for license information.}}
+<div class='container'>
+  <div style='float:left'>
+    <h2>Inbox</h2>
+  </div>
+
+  <div style='float:right'>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Compose</button>
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header modal-header-info">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title"><span class="glyphicon glyphicon-envelope"></span> Compose
+              Email</h4>
+          </div>
+          <div class="modal-body">
+            <form role="form" class="form-horizontal" id='myForm'>
+              <div class="form-group">
+                <label class="col-sm-2" for="inputTo"><span class="glyphicon glyphicon-user"></span>From</label>
+                <div class="col-sm-10"><input type="email" class="form-control" id="inputFrom" value="Me" disabled>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2" for="inputTo"><span class="glyphicon glyphicon-user"></span>To</label>
+                <div class="col-sm-10"><input type="email" class="form-control" id="inputTo"
+                    placeholder="comma separated list of recipients"></div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2" for="inputSubject"><span
+                    class="glyphicon glyphicon-list-alt"></span>Subject</label>
+                <div class="col-sm-10"><input type="text" class="form-control" id="inputSubject" placeholder="subject">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-12" for="inputBody"><span class="glyphicon glyphicon-list"></span>Message</label>
+                <div class="col-sm-12"><textarea class="form-control" id="inputBody" rows="8"></textarea></div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <i class="fa fa-paperclip fa-2x" aria-hidden="true" id='upfile1' style='cursor:pointer'></i>
+            <input type='file' id='file1' style='display:none'>
+            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-warning pull-left">Save Draft</button>
+            <button type="button" class="btn btn-primary " onclick='sendMessage()' data-dismiss="modal">Send<i
+                class="fa fa-arrow-circle-right fa-lg" style='margin-left:10px;'></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="newModal" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header modal-header-info">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title"><span class="glyphicon glyphicon-envelope"></span> Read Message</h4>
+      </div>
+      <div class="modal-body" id="openMessage">
+      </div>
+        <button type="button" class="btn btn-primary" style='margin-bottom:10px;' data-target='#Modal' data-toggle='modal' data-dismiss="modal">Reply</button>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="Modal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header modal-header-info">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title"><span class="glyphicon glyphicon-envelope"></span> Reply</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form" class="form-horizontal" id='myForm'>
+          <div class="form-group">
+            <label class="col-sm-2" for="inputTo"><span class="glyphicon glyphicon-user"></span>To</label>
+            <div class="col-sm-10"><input type="email" class="form-control" id="inputTo"
+                value='To' disabled></div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2" for="inputSubject"><span
+                class="glyphicon glyphicon-list-alt"></span>Subject</label>
+            <div class="col-sm-10"><input type="text" class="form-control" id="inputSubject" placeholder="subject">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-12" for="inputBody"><span class="glyphicon glyphicon-list"></span>Message</label>
+            <div class="col-sm-12"><textarea class="form-control" id="inputBody" rows="8"></textarea></div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <i class="fa fa-paperclip fa-2x" aria-hidden="true" id='upfile1' style='cursor:pointer'></i>
+        <input type='file' style='display:none' id='file1'>
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-warning pull-left">Save Draft</button>
+        <button type="button" class="btn btn-primary " onclick='sendMessage()' data-dismiss="modal">Send<i
+            class="fa fa-arrow-circle-right fa-lg" style='margin-left:10px;'></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<table class="table">
+  <thead class="thead-light">
+    <th scope="col">From</th>
+    <th scope="col">Subject</th>
+    <th scope="col">Received</th>
+  </thead>
+  <tbody>
+    {{#each messages}}
+    <tr class="{{#unless this.isRead}}table-primary{{/unless}}" id="{{this.id}}" data-toggle="modal"
+      data-target="#newModal" onClick="readMessage(this)" style='cursor:pointer'>
+      <td title="{{this.from.emailAddress.address}}">{{this.from.emailAddress.name}}</td>
+      <td>{{this.subject}}</td>
+      <td>{{this.receivedDateTime}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<script>
+
+  $("#upfile1").click(function () 
+  {
+    $("#file1").trigger('click');
+  });
+
+
+  function sendMessage() {
+    var to = document.getElementById('inputTo').value;
+    var message = document.getElementById('inputBody').value;
+    var subject = document.getElementById('inputSubject').value;
+
+    fetch('/composeMessage', {
+      method: 'POST',
+      body: JSON.stringify({
+        'to': to,
+        'subject': subject,
+        'message': message
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
+    })
+      .then(response => response.json())
+      .then(json => console.log(json))
+
+    document.getElementById('myForm').reset();
+  }
+
+  function readMessage(data) {
+    let messageId = data.id;
+    console.log(messageId);
+    fetch('/mail/read', {
+      method: 'POST',
+      body: JSON.stringify({
+        'messageId': messageId
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
+    })
+      .then(response => {
+        return response.json()
+      })
+      .then(json => {
+        document.getElementById('openMessage').innerHTML = json.data;
+      })
+  }
+
+
+</script>
