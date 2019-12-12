@@ -41,6 +41,13 @@
             </div>
           </form>
         </div>
+
+        <div id='attachment-container'>
+          <p id='attachment' style='margin-left:15px;'></p>
+        </div>
+
+
+
         <div class="modal-footer">
           <i class="fa fa-paperclip fa-lg" aria-hidden="true" id='upfile1' style='cursor:pointer'></i>
           <input type='file' id='file1' style='display:inline-block' name="myFiles" onchange='getFile()' multiple>
@@ -99,6 +106,10 @@
       </div>
 
 
+      <div id='attachment-container'>
+        <p id='attachment1' style='margin-left:15px;'></p>
+      </div>
+
 
       <div class="modal-footer">
         <i class="fa fa-paperclip fa-lg" aria-hidden="true" id='upfile2' style='cursor:pointer'></i>
@@ -138,13 +149,17 @@
     totalFileSize = 0;
     if (fi.files.length > 0)
     {
+      document.getElementById('attachment').innerHTML='<ul>'
       for (var i = 0; i <= fi.files.length - 1; i++)
       {
+        document.getElementById('attachment').innerHTML+='<li>' + fi.files.item(i).name + '</li>';
+
         var fsize = fi.files.item(i).size;
         totalFileSize = totalFileSize + fsize;
         console.log('FileName: ' + fi.files.item(i).name  + '   FileSize: ' + totalFileSize + 
-             '    File Type is: ' + fi.files.item(i).type + "</b>.");
+        '    File Type is: ' + fi.files.item(i).type + "</b>.");
       }
+      document.getElementById('attachment').innerHTML+='</ul>';
     }
   }
 
@@ -155,13 +170,17 @@
     totalFileSize = 0;
     if (fi.files.length > 0)
     {
+      document.getElementById('attachment1').innerHTML='<ul>'
       for (var i = 0; i <= fi.files.length - 1; i++)
       {
+        document.getElementById('attachment1').innerHTML+='<li>' + fi.files.item(i).name + '</li>';
+        
         var fsize = fi.files.item(i).size;
         totalFileSize = totalFileSize + fsize;
         console.log('FileName: ' + fi.files.item(i).name  + '   FileSize: ' + totalFileSize + 
-             '    File Type is: ' + fi.files.item(i).type + ".");
+        '    File Type is: ' + fi.files.item(i).type + "</b>.");
       }
+      document.getElementById('attachment1').innerHTML+='</ul>';
     }
   }
 
