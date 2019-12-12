@@ -23,3 +23,12 @@ h4
   position: absolute;
   float: left;
 }
+.centered-modal.in {
+  display: flex !important;
+}
+.centered-modal .modal-dialog {
+  margin: auto;
+}
+.attachment-container {
+  display: flex;
+}

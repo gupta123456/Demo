@@ -1,3 +1,4 @@
+{{! Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE.txt in the project root for license information.}}
 <div class='container'>
   <div style='float:left'>
     <h2>Inbox</h2>
@@ -8,8 +9,8 @@
       id='com'>Compose</button>
   </div>
   <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content" style='width:fit-content'>
+    <div class="modal-dialog" style='display:block;vertical-align: middle;'>
+      <div class="modal-content" style='height:auto;width:1000px;'>
         <div class="modal-header modal-header-info">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
           <h4 class="modal-title"><span class="glyphicon glyphicon-envelope"></span> Compose
@@ -33,18 +34,15 @@
               <div class="col-sm-10"><input type="text" class="form-control" id="inputSubject" placeholder="subject">
               </div>
             </div>
-            <div class='form-group'>
-              <label class="col-sm-12" for="inputBody"><span class="glyphicon glyphicon-list"></span>Message</label>
-            </div>
             <div>
+              <label class="col-sm-12" for="inputBody"><span class="glyphicon glyphicon-list"></span>Message</label>
               <div id="summernote"></div>
             </div>
           </form>
         </div>
         <div class="modal-footer">
           <i class="fa fa-paperclip fa-lg" aria-hidden="true" id='upfile1' style='cursor:pointer'></i>
-          <input type='file' id='file1' style='display:inline-block' name="myFiles" onchange='getFile()' multiple>
-          {{!-- selected files: <span id="fileNum">0</span>; total size: <span id="fileSize">0</span> --}}
+          <input type='file' id='file1' style='display:none'>
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
           <button type="button" class="btn btn-warning pull-left">Save Draft</button>
           <button type="button" class="btn btn-primary " onclick='sendMessage()' data-dismiss="modal">Send<i
@@ -72,11 +70,11 @@
 </div>
 
 <div class="modal fade" id="Modal" role="dialog">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content" style='width:fit-content'>
-      <div class="modal-header modal-header-info"><span class="glyphicon glyphicon-list"></span>
+  <div class="modal-dialog" style='display:block;vertical-align: middle;'>
+    <div class="modal-content" style='height:auto;width:1000px;'>
+      <div class="modal-header modal-header-info">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h4 class="modal-title"><span class="glyphicon glyphicon-envelope" id='reply1'></span> Reply</h4>
+        <h4 class="modal-title"><span class="glyphicon glyphicon-envelope"></span> Reply</h4>
       </div>
       <div class="modal-body">
         <form role="form" class="form-horizontal" id='myform'>
@@ -86,23 +84,18 @@
           </div>
           <div class="form-group">
             <label class="col-sm-2" for="inputSubject"><span class="glyphicon glyphicon-list-alt"></span>Subject</label>
-            <div class="col-sm-10"><input type="text" class="form-control" id="inputSubj" placeholder="subject">
+            <div class="col-sm-10"><input type="text" class="form-control" id="inputSub" placeholder="subject">
             </div>
           </div>
-          <div class='form-group'>
-            <label class="col-sm-12" for="inputBody"><span class="glyphicon glyphicon-list"></span>Message</label>
-          </div>
           <div>
+            <label class="col-sm-12" for="inputBody"><span class="glyphicon glyphicon-list"></span>Message</label>
             <div id="summernote1"></div>
           </div>
         </form>
       </div>
-
-
-
       <div class="modal-footer">
         <i class="fa fa-paperclip fa-lg" aria-hidden="true" id='upfile2' style='cursor:pointer'></i>
-        <input type='file' style='display:inline-block' id='file2' onchange='getFileRep()' multiple>
+        <input type='file' style='display:none' id='file2' onchange="element(this).scope().getFile(event,this)">
         <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn-warning pull-left">Save Draft</button>
         <button type="button" class="btn btn-primary " onclick='Reply()' data-dismiss="modal">Send<i
@@ -132,39 +125,6 @@
 </table>
 <script>
 
-  function getFile() 
-  {
-    fi=document.getElementById('file1'),
-    totalFileSize = 0;
-    if (fi.files.length > 0)
-    {
-      for (var i = 0; i <= fi.files.length - 1; i++)
-      {
-        var fsize = fi.files.item(i).size;
-        totalFileSize = totalFileSize + fsize;
-        console.log('FileName: ' + fi.files.item(i).name  + '   FileSize: ' + totalFileSize + 
-             '    File Type is: ' + fi.files.item(i).type + "</b>.");
-      }
-    }
-  }
-
-
-  function getFileRep() 
-  {
-    fi=document.getElementById('file2'),
-    totalFileSize = 0;
-    if (fi.files.length > 0)
-    {
-      for (var i = 0; i <= fi.files.length - 1; i++)
-      {
-        var fsize = fi.files.item(i).size;
-        totalFileSize = totalFileSize + fsize;
-        console.log('FileName: ' + fi.files.item(i).name  + '   FileSize: ' + totalFileSize + 
-             '    File Type is: ' + fi.files.item(i).type + ".");
-      }
-    }
-  }
-
 
   $(document).ready(function () {
     var clearStyleButton = function (context) {
@@ -182,9 +142,10 @@
       });
       return button.render();
     }
+
     $('#com').click(function () {
       $('#summernote').summernote({
-        height: 200,
+        height: 300,
         minHeight: null,
         maxHeight: null,
         focus: true,
@@ -210,7 +171,7 @@
     });
     $('#reply1').click(function () {
       $('#summernote1').summernote({
-        height: 200,
+        height: 300,
         minHeight: null,
         maxHeight: null,
         focus: true,
@@ -240,23 +201,21 @@
   $("#upfile1").click(function () {
     $("#file1").trigger('click');
   });
+
   $("#upfile2").click(function () {
     $("#file2").trigger('click');
   });
 
 
-
   function Reply() {
-    var subj = document.getElementById('inputSubj').value;
-    var markupSt = $('#summernote1').summernote('code');
-    console.log(markupSt, subj);
+    var subj = document.getElementById('inputSub').value;
+
+    console.log(mess, subj);
     fetch('/replyMessage', {
       method: 'POST',
       body: JSON.stringify({
         'subject': subj,
-        'message': markupSt,
-        'messageId': messageId,
-        //'toAddress': toAddress
+        'message': mess1
       }),
       headers: {
         "Content-type": "application/json; charset=UTF-8"
@@ -265,10 +224,7 @@
       .then(response => response.json())
       .then(json => console.log(json))
     document.getElementById('myform').reset();
-    markupSt = null;
-    $('#summernote').summernote('code', markupSt);
   }
-
 
 
   function sendMessage() {
@@ -293,9 +249,7 @@
       .then(json => console.log(json))
 
     document.getElementById('myForm').reset();
-    markupStr = null;
-    $('#summernote').summernote('code', markupStr);
-
+    markupStr=null;
   }
 
 
@@ -316,10 +270,9 @@
         return response.json()
       })
       .then(json => {
-        //console.log(">>>>>>>>>>", json)
-        //toAddress = json.senderData.address;
-        //console.log('???????????????????????????', toAddress)
         document.getElementById('openMessage').innerHTML = json.data;
       })
   }
+
+
 </script>
