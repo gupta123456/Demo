@@ -9,6 +9,8 @@ router.post('/', async function (req, res, next) {
   let toEmails = req.body.to;
   let emailSubject = req.body.subject;
   let emailBody = req.body.message;
+  let fileName=req.body.fileName;
+  let ContentBytes=req.body.ContentBytes
 
   let recipientData = [];
 
@@ -63,8 +65,8 @@ router.post('/', async function (req, res, next) {
           "Attachments": [
             {
               "@odata.type": "#Microsoft.OutlookServices.FileAttachment",
-              "Name": "attachment.txt",
-              "ContentBytes": "bWFjIGFuZCBjaGVlc2UgdG9kYXk="
+              "Name": fileName,
+              "ContentBytes": ContentBytes.toString()
             }
           ]
         },

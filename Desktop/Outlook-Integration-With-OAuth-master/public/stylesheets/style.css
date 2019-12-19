@@ -32,3 +32,12 @@ h4
 .attachment-container {
   display: flex;
 }
+#attachment,#attachment1
+{
+  border: 1px solid transparent;
+  color:#15c;
+  margin-left:15px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  font-weight: bold;
+}
