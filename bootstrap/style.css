@@ -1,0 +1,350 @@
+body
+{
+    background-image: linear-gradient(0deg, MediumSeaGreen, SlateBlue);
+}
+h1,h2
+{
+    margin-top: 100px;
+}
+#btn:hover
+{
+    background-color: orange;
+}
+#span,#i
+{
+    margin-left: 10px;
+}
+.menu
+{
+    margin-left: 100px;
+}
+#home
+{
+    background-color: lightgrey;
+}
+h3,p
+{
+    color: white;
+}
+h2
+{
+    color:white;
+}
+#a
+{
+    margin-left: 380px;
+}
+#sp
+{
+    margin-left: 40px;
+}
+.nav_area
+{
+    margin-top: 20px;
+}
+.header_top 
+{
+    padding: 10px 0;
+    background: #f8f8f8;
+}
+.header_top p 
+{
+    margin-bottom: 0;
+}
+.header_top p span,
+.header_top p a 
+{
+    margin-right: 20px;
+}
+.nav_area 
+{
+    background: #fff scroll 0 0;
+    padding: 20px 0;
+    transition: all 0.3s 0s;
+}
+menu .current > a 
+{
+    color: orangered;
+}
+.single_about 
+{
+    background-image: linear-gradient(0deg, MediumSeaGreen, SlateBlue);
+    padding: 30px 10px 17px;
+    text-align: center;
+    transition: .5s;
+}
+.single_about .icon 
+{
+    border-radius: 50%;
+    color: #ff5e00;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 30px;
+    height: 100px;
+    line-height: 76px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100px;
+    transition: .5s;
+}
+.single_about:hover .icon 
+{
+    transform: rotate(250deg);
+    background: orange;
+}
+.progress_area 
+{
+    background-image: linear-gradient(0deg, MediumSeaGreen, SlateBlue);
+    margin-top: 30px;
+    padding: 100px 0 85px;
+}
+.our_skill .skill-wrapper 
+{
+    float: left;
+    margin: 0 0 22px;
+    position: relative;
+    width: 100%;
+}
+.our_skill .skill-wrapper .percent 
+{
+    background: #e8e8e8 none repeat scroll 0 0;
+    height: 5px;
+    margin-bottom: 6px;
+    width: 100%;
+}
+.our_skill .skill-wrapper .percent .percent_color 
+{
+    background: rgb(255, 94, 0);
+    height: 5px;
+}
+.percent_text 
+{
+    margin-bottom: 0;
+    color: white;
+    font-size: 14px;
+    font-family:  sans-serif;
+    font-weight: 400;
+    line-height: 25px;
+}
+.percent_text
+{
+    float: right;
+    text-align: right;
+}
+#img
+{
+    width:200px;
+}
+#span
+{
+    color:white;
+}
+#project
+{
+    background-image: linear-gradient(0deg, MediumSeaGreen, SlateBlue);
+}
+.filter
+{
+    background-color: white;
+}
+.portfolio_nav 
+{
+    padding: 46px 0 50px;
+}
+.portfolio_nav ul 
+{
+    text-align: center;
+}
+.portfolio_nav ul li 
+{
+    display: inline-block;
+    padding: 8px 14px 9px;
+    color: #323b48;
+    font-weight: bold;
+    transition: .5s;
+    line-height: 21px;
+    cursor: pointer;
+}
+.portfolio_nav ul li:hover 
+{
+    color: #fff;
+    background: #ff5e00;
+}
+.single_protfolio 
+{
+    position: relative;
+}
+.prot_thumb img 
+{
+    width: 100%;
+    display: block;
+}
+.topnav
+{
+    overflow: hidden;
+    background-image: linear-gradient(0deg, MediumSeaGreen, SlateBlue);
+    position: sticky;
+}
+.topnav a 
+{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav a:hover 
+{
+    background-color: #ddd;
+}
+.topnav .icon 
+{
+    display: none;
+}
+
+@media screen and (max-width: 670px) 
+{
+    .topnav a {display: none;}
+    .topnav a.icon 
+    {
+        float: right;
+        display: block;
+    }
+}
+@media screen and (max-width: 670px) 
+{
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon 
+    {
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+}
+.topnav.responsive a 
+{
+    float: none;
+    display: block;
+    text-align: left;
+}
+.counter_area {
+    background: #3e4756 url("client.jpeg") no-repeat fixed center center;
+    padding: 97px 0 86px;
+    position: relative;
+    z-index: 1;
+    background-size:cover;
+    margin-top: 40px;
+}
+.home_2.counter_area 
+{
+    padding: 97px 0 91px;
+}
+.counter_area:after 
+{
+    background: rgba(0, 0, 0, .7);
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+.counter_icon p 
+{
+    text-align: center;
+}
+.counter_icon p i 
+{
+    color: #ff5e00;
+	font-size:20px;
+}
+.home-3 .counter_icon p i 
+{
+	color: #1bbc9b;
+}
+.countr_text 
+{
+    border-radius: 100%;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+.countr_text h1 
+{
+    color: #fff;
+    display: inline-block;
+    font-size: 27px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 999;
+}
+.countr_text h3 
+{
+    color: #fff;
+    display: inline-block;
+    font-size: 27px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 999;
+}
+.single_counter > p 
+{
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
+}
+#h::first-letter
+{
+    color:orange;
+}
+#img1
+{
+    width:1330px;
+    height:450px;
+}
+#cen
+{
+    text-align: center;
+}
+.google_map
+{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.google_map iframe
+{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.cen
+{
+    display: inline;
+    text-align: center;
+    margin: 0px;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+.a
+{
+    text-align: center;
+}
+#myTopnav
+{
+    text-align: center;
+}
+.team_info
+{
+    margin-bottom: 30px;
+}

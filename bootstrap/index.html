@@ -1,0 +1,436 @@
+<html>
+    <head>
+        <title>Bootstrap website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel='stylesheet' href='style.css'>
+    </head>
+    <body>
+        <div class="header_top" id="home">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<p>
+                            <span><i class="fa fa-phone" style="color:orange;"></i>&nbsp&nbsp9285 - 2294 - 0894</span>
+                            <span id='span'><i class="fa fa-envelope-o" style="color:orange;"></i>&nbsp&nbspanujg0046@gmail.com</span>
+						</p>
+					</div>	
+					<div class="col-xs-12 col-md-6">
+                        <a class="facebook" href="#" id='a'><i class="fa fa-facebook" style="color:grey;"></i></a>
+                        <span><a href="#"><i class="fa fa-twitter" style="color:grey;"></i></a></span>
+                        <span><a href="#"><i class="fa fa-rss" style="color:grey;"></i></a></span>
+                        <span><a href="#"><i class="fa fa-google-plus" style="color:grey;"></i></a></span>
+                        <span><a href="#"><i class="fa fa-linkedin" style="color:grey;"></i></a></span>
+                        <span><a href="#"><i class="fa fa-pinterest" style="color:grey;"></i></a></span>
+					</div>	
+				</div>
+			</div>
+        </div>
+        <div class="topnav" id="myTopnav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#team">Team</a>
+            <a href="#project">Projects</a>
+            <a href="#services">Services</a>
+            <a href="#Contact">Contact</a>
+            <a href="#" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="1.png" style="width:100%;">
+                    <div class="carousel-caption">
+                        <h2>WE ARE CREATIVE DESIGNER</h2>
+                        <h1>OUR AWESOME <font color='orange'>WEBSITE</font></h1>
+                        <button type="button" class="btn btn-warning">Learn more</button>
+                        <button type="button" class="btn btn-default" id='btn'>Learn more</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="2.png" style="width:100%;">
+                    <div class="carousel-caption">
+                        <h1>WELCOME TO <font color='orange'> BRAVERY</font></h1>
+                        <button type="button" class="btn btn-default" id='btn'>GET STARTED</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about_area" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section_title">
+                            <h2><span><center>What We <strong><font color='orange'>Offer</font></strong></center></span></h2>
+                            <span class="heading_style"></span>
+                            <center>
+                                <p>We offer easy customization to code,clean design,HTML5 and CSS3</p>
+                                <p>and we also offer full responsive websites.</p>
+                            </center>
+                        </div>
+                    </div>  
+                </div> 
+                <div class='empty-space'></div>
+			    <div class="row">
+				    <div class="about_wrap">
+					    <div class="col-md-3 col-sm-6">
+						    <div class="single_about">
+							    <div class="icon"><span><i class="fa fa-cog"></i></span></div>
+							    <div class="content_about">
+                                    <h3>Easy Customization</h3>
+                                    <p>We provide easy customization for the code.</p>
+							    </div>
+						    </div>
+                        </div> 
+                        <div class="col-md-3 col-sm-6">
+                            <div class="single_about">
+                                <div class="icon"><span><i class="fa fa-thumbs-o-up"></i></span></div>
+                                <div class="content_about">
+                                    <h3>Clean design</h3>
+                                    <p>We use clean design for code structure.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="single_about">
+                                <div class="icon"><span><i class="fa fa-html5"></i></span></div>
+                                <div class="content_about">
+                                    <h3>Html5 & CSS3</h3>
+                                    <p>We use HTML5 and CSS3 for web designing.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="single_about">
+                                <div class="icon"><span><i class="fa fa-laptop"></i></span></div>
+                                <div class="content_about">
+                                    <h3>Responsive Design</h3>
+                                    <p>We make websites fully responsive for every device.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>		
+            </div> 
+        </div>
+        <div class="progress_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="progress_text">
+                            <h3><span>See Our Expertice </span></h3>
+                            <p>Our team is expertised in Web designing,PHP and javascript,HTML5,CSS3,Wordpress and many more technologies.</p>
+                            <p>Our team have many years of experience in web designing using latest web technologies.</p>
+                        </div>
+                    </div>
+                    <div class="our_skill col-md-6">
+                        <h3>Our Skills</h3>
+                        <div class="skill-wrapper">
+                            <div class="percent">
+                                <div class="percent_color" style="width: 90%;"></div>
+                            </div>
+                            <div class="percent_text">Web Design<span>+90%</span></div>
+                        </div>
+                        <br>
+                        <div class="skill-wrapper">
+                            <div class="percent">
+                                <div class="percent_color" style="width: 85%;"></div>
+                            </div>
+                            <div class="percent_text">PHP And Javascript<span>+85%</span></div>
+                        </div>
+                        <br />
+                        <div class="skill-wrapper">
+                            <div class="percent">
+                                <div class="percent_color" style="width: 100%;"></div>
+                            </div>
+                            <div class="percent_text">HTML5 And CSS3<span>+100%</span></div>
+                        </div>
+                        <br />
+                        <div class="skill-wrapper">
+                            <div class="percent">
+                                <div class="percent_color" style="width: 92%;"></div>
+                            </div>
+                            <div class="percent_text">WordPress<span>+92%</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>	
+        </div>
+        <div class="team_area" id="team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section_title">
+                            <center>
+                            <h2 id='h'><span>Our Small <strong>Team</strong></span></h2>
+                            <span class="heading_style"></span>
+                            <p>Below are some of our best web designers in our company.</p>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="about_wrap">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="single_about">
+                                <img src="team1.jpg" alt="" id='img'/>
+                                <div class="team_social_icon">
+                                    <div class="team_social">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team_info">
+                                <span class="member-name" id='span'>Myccale Jonnson</span>
+                                <span class="member-role" id='span'>Web Designer</span>
+                            </div>
+                        </div>
+                    </div>					
+                    <div class="about_wrap">
+                        <div class="col-md-3 col-sm-6">
+                                <div class="single_about">
+                                <img src="team2.jpg" alt="" id='img' />
+                                <div class="team_social_icon">
+                                    <div class="team_social">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team_info">
+                                <span class="member-name" id='span'>Myccale Jonnson</span>
+                                <span class="member-role" id='span'>Web Designer</span>
+                            </div>
+                        </div>
+                    </div>					
+                    <div class="about_wrap">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="single_about">
+                                <img src="team3.jpg" alt="" id='img'/>
+                                <div class="team_social_icon">
+                                    <div class="team_social">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team_info">
+                                <span class="member-name" id='span'>Myccale Jonnson</span>
+                                <span class="member-role" id='span'>Web Designer</span>
+                            </div>
+                        </div>
+                    </div>					
+                    <div class="about_wrap">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="single_about">
+                                <img src="team4.jpg" alt="" id='img'/>
+                                <div class="team_social_icon">
+                                    <div class="team_social">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team_info">
+                                <span class="member-name" id='span'>Myccale Jonnson</span>
+                                <span class="member-role" id='span'>Web Designer</span>
+                            </div>
+                        </div>
+                    </div>					
+                </div>
+            </div>
+        </div>
+        <div class="protfolio_area" id="project">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section_title">
+                            <center><h2 id='h'><span>Our Latest <strong>work</strong></span></h2></center>
+                            <span class="heading_style"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="portfolio_nav">
+                            <ul>
+                                <li class="active filter" data-filter="all"  data-placement="top">All works</li>
+                                <li class="filter" data-filter=".Business"   data-placement="top">Business</li>
+                                <li class="filter" data-filter=".Website"   data-placement="top">Website</li>
+                                <li class="filter" data-filter=".Photography"  data-placement="top">Photography</li>
+                                <li class="filter" data-filter=".Logo"  data-placement="top">Logo</li>
+                                <li class="filter" data-filter=".Photoshop" data-placement="top">Photoshop</li>
+                            </ul>
+                        </div>
+                    </div>				
+                </div>
+                <div class="row">
+                    <div class="prot_wrap">
+                        <div class="col-md-3 mix Business Photoshop Logo ">
+                            <div class="single_protfolio">
+                                <div class="prot_thumb">
+                                    <img src="p3.jpg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mix Business Website Photoshop Logo ">
+                            <div class="single_protfolio">
+                                <div class="prot_thumb">
+                                    <img src="p4.jpg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mix Logo Photography">
+                            <div class="single_protfolio">
+                                <div class="prot_thumb">
+                                    <img src="p5.jpg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mix Website  Logo ">
+                            <div class="single_protfolio">
+                                <div class="prot_thumb">
+                                    <img src="p6.jpg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mix Business Logo  Photography">
+                            <div class="single_protfolio">
+                                <div class="prot_thumb">
+                                    <img src="p7.jpg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mix Website Photoshop Logo ">
+                            <div class="single_protfolio">
+                                <div class="prot_thumb">
+                                    <img src="p8.jpg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mix Logo Photoshop Photography">
+                            <div class="single_protfolio">
+                                <div class="prot_thumb">
+                                    <img src="p9.jpg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mix Business Photography Website Logo ">
+                            <div class="single_protfolio">
+                                <div class="prot_thumb">
+                                    <img src="p1.jpg" alt="" />
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                </div>			
+            </div>
+        </div>
+        <div class="counter_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single_counter">
+                            <div class="counter_icon">
+                                <p><i class="fa fa-plane"></i></p>
+                            </div>
+                            <div class="countr_text">
+                                <h1>352</h1>
+                                <h3>+</h3>
+                            </div>
+                            <p>Runing Project</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single_counter">
+                            <div class="counter_icon">
+                                <p><i class="fa fa-smile-o"></i></p>
+                            </div>
+                            <div class="countr_text">
+                                <h1>694</h1>
+                                <h3>+</h3>
+                            </div>
+                            <p>Happy Client</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single_counter">
+                            <div class="counter_icon">
+                                <p><i class="fa fa-suitcase"></i></p>
+                            </div>
+                            <div class="countr_text">
+                                <h1>830</h1>
+                                <h3>+</h3>
+                            </div>
+                            <p>Work Done</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single_counter">
+                            <div class="counter_icon">
+                                <p><i class="fa fa-trophy"></i></p>
+                            </div>
+                            <div class="countr_text">
+                                <h1>156</h1>
+                                <h3>+</h3>
+                            </div>
+                            <p>Articles Published</p>
+                        </div>
+                    </div>
+                    
+                </div>		
+            </div>
+        </div> 
+        <div class='google_map' id='Contact'>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109793.24991955816!2d76.83760965097647!3d30.689177083316437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f9384b08336e9%3A0xaed02374458025b1!2sPanchkula%20IT%20Park!5e0!3m2!1sen!2sin!4v1568088533721!5m2!1sen!2sin" 
+            width="1130" height="350" frameborder="0" style="border:0; margin-top: 70px" allowfullscreen=""></iframe>
+        </div>
+        <div class='text-center cen'>
+            <h2 id='cen'>B<font color='orange'>R</font>A<font color='orange'>V</font>
+            E<font color='orange'>R</font>Y</h2>
+            <div class='a'>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+            </div>
+        </div>
+        <script>
+            function myFunction() 
+            {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") 
+                {
+                    x.className += " responsive";
+                } 
+                else 
+                {
+                    x.className = "topnav";
+                }
+            }
+        </script>  
+    </body>
+</html>
