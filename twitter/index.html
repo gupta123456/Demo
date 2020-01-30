@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+        <link rel='stylesheet' href='style.css'>
+    </head>
+    <body onload="getdata()">
+        <div class='main'>
+            <div class="navbar">
+                <div class="content">
+                    <button class="like" href="#" id='like'><i class="fa fa-thumbs-up"></i> Likes</button> 
+                    <button class="tweet" href="#" id='tweet'><i class="fa fa-twitter"></i> Tweets</button> 
+                    <button class="share" href="#" id='share'><i class="fa fa-share"></i> Share</button> 
+                    <button  class="date" href="#" id='date'><i class="fa fa-table"></i> Date</button>
+                </div>
+                <div class="rcontent">
+                    From: <input type="date" id="d1">
+                    To: <input type="date" id="d2">
+                    <button id='btn'>GO</button>
+                </div>
+            </div>
+        </div>
+        <div class='demo'>
+             <div class="box">
+                <h3>
+                <img src='img_5.jpeg' style="width: 100px;height:100px;border-radius: 50px;">
+                <span> Elan </span>
+                </h3>
+                <table style="margin-top:60px;">
+                    <tr>
+                        <th style="padding-left: 25px;">Likes </th>
+                        <th style="padding-left: 25px;">Tweets</th>
+                        <th style="padding-left: 25px;"> Share</th>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 25px;">10</td>
+                        <td style="padding-left: 25px;">540</td>
+                        <td style="padding-left: 25px;">450</td>
+                    </tr>
+                </table>
+                <br>
+                <label> Posted On:</label>
+                <span > 24 Dec 2011 </span>
+            </div> 
+        </div>
+        <script src='data2.js'></script>
+    </body>
+</html>

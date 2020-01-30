@@ -1,0 +1,42 @@
+[
+    {
+        "Name":"Elan",
+        "likes":20,
+        "Tweets":11,
+        "Shares":12,
+        "Date":"28 Aug 2019",
+        "img":"img_1.jpeg"
+    }, 
+    {
+        "Name":"Mike",
+        "likes":100,
+        "Tweets":100,
+        "Shares":50,
+        "Date":"09 Dec 2018",
+        "img":"img_2.jpeg"
+    },
+    {
+        "Name":"Diana",
+        "likes":24,
+        "Tweets":600,
+        "Shares":90,
+        "Date":"14 Feb 2017",
+        "img":"img_3.jpeg"
+    },
+    {
+        "Name":"clay",
+        "likes":2000,
+        "Tweets":19,
+        "Shares":500,
+        "Date":"29 May 2015",
+        "img":"img_4.png"
+    },
+    {
+        "Name":"Musk",
+        "likes":50,
+        "Tweets":140,
+        "Shares":400,
+        "Date":"25 Aug 2013",
+        "img":"img_6.png"
+    }
+]
